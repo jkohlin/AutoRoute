@@ -1,4 +1,27 @@
-// doc ready function originally by Matteo Spinelli. 
-var _el='addEventListener'_w;var _dr=false;if(document.readyState==='complete'){_dr=true;}elseif(_el){window.addEventListener('load',lo,false);}functionlo(){window.removeEventListener('load',lo,false);_dr=true;start();}
-//by jKohlin
-functionstart(){var links=document.getElementsByTagName("a");for(i=0;i<links.length;i++){links[i].addEventListener("click",function(e){e.preventDefault();location.href=e.target.href;});}}
+//Originally by Matteo Spinelli
+var _e = 'addEventListener' in window;
+var _d = false;
+if (document.readyState === 'complete') {
+    _d = true;
+} else if (_e) {
+    window.addEventListener('load', lo, false);
+}
+
+function lo() {
+    window.removeEventListener('load', lo, false);
+    _d = true;
+    st();
+}
+//by Johan Kohlin
+
+function _r(e) {
+    e.preventDefault();
+    location.href = e.target.href;
+}
+
+function st() {
+    var _l = document.getElementsByTagName("a");
+    for (i = 0; i < _l.length; i++) {
+        _l[i].addEventListener("click", _r, false);
+    }
+}
