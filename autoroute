@@ -1,4 +1,5 @@
-//Originally by Matteo Spinelli
+//This part originally by Matteo Spinelli (https://github.com/cubiq/add-to-homescreen/blob/master/src/addtohomescreen.js). 
+// Does what jQuery does with $(document).ready()
 var _e = 'addEventListener' in window;
 var _d = false;
 if (document.readyState === 'complete') {
